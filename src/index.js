@@ -13,7 +13,7 @@ searchForm.addEventListener('input', debounce((event) => {
 }, DEBOUNCE_DELAY)); 
 
 function fetchCountries(name) {
-    fetch(`https://restcountries.com/v3.1/name/${name}`).then(response => response.json()).then(country => {
+    fetch(`https://restcountries.com/v3.1/name/${name}?fields=name,capital,flags,population,languages`).then(response => response.json()).then(country => {
         let markUp = [];
         let markUpDiv = [];
         
