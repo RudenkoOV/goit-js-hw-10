@@ -4,7 +4,7 @@ export function makeMarkup(country, list, info) {
         let markUpDiv = [];
         if (country.length < 60 & country.length > 0) {
             if (country.length == 1) {
-                for (each of country) {
+                for (let each of country) {
                     markUp.push(`<li class="country__list"><img class="country__list__image" src="${each.flags.svg}" alt="${each.name.official}" width="30"></img><p style = "font-size: 40px">${each.name.official}</p></li>`);
                     markUpDiv.push(`
             <ul class="country__info">
@@ -15,7 +15,7 @@ export function makeMarkup(country, list, info) {
                 }
             }
             else {
-                for (each of country) {
+                for (let each of country) {
                     markUp.push(`<li class="country__list"><img class="country__list__image" src="${each.flags.svg}" alt="${each.name.official}" width="40"></img><p>${each.name.official}</p> </li>`);
                 }
             }
