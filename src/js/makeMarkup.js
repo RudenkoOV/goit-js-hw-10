@@ -2,7 +2,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 export function makeMarkup(country, list, info) {
         let markUp = [];
         let markUpDiv = [];
-        if (country.length < 60 & country.length > 0) {
+        if (country.length < 10 & country.length > 0) {
             if (country.length == 1) {
                 for (let each of country) {
                     markUp.push(`<li class="country__list"><img class="country__list__image" src="${each.flags.svg}" alt="${each.name.official}" width="30"></img><p style = "font-size: 40px">${each.name.official}</p></li>`);
