@@ -22,7 +22,6 @@ export function makeMarkup(country, list, info) {
         } else if (!country.length) {
             list.innerHTML = '';
             info.innerHTML = '';
-            Notify.failure('Oops, there is no country with that name');
         } else { Notify.info('Too many matches found. Please enter a more specific name.') };
         list.innerHTML = markUp.join('');
         info.innerHTML = markUpDiv;
