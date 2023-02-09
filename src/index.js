@@ -11,6 +11,7 @@ const countryInfoEl = document.querySelector('.country-info');
 searchForm.addEventListener('input', debounce((event) => {
     event.preventDefault();
     const form = event.target.value.trim();
-    fetchCountries(form).then(country => makeMarkup(country,countryListEl,countryInfoEl), DEBOUNCE_DELAY).catch(error => console.log(error))
+    if (form.length > 0) {
+    fetchCountries(form).then(country => makeMarkup(country,countryListEl,countryInfoEl), DEBOUNCE_DELAY).catch(error => console.log(error))}
 }));
 
